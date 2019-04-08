@@ -51,5 +51,6 @@ You can also talk to us on [Discord](https://discord.me/bungeechat).
 Better Potions is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Random Quote
-Windows NT addresses 2 gigabytes of RAM, which is more than any application wants ever. 
-Microsoft, on the development of Windows NT, 1992
+> Walking on water and developing software are both easy and both are frozen.
+>
+> - <cite>Edward V Berard</cite>
