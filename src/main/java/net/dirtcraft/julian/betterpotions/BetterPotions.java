@@ -110,6 +110,8 @@ public class BetterPotions {
                 .child(Slowness.build(), "slowness")
                 .child(Weakness.build(), "weakness")
                 .child(Wither.build(), "wither")
+                .child(BadLuck.build(), "badluck")
+                .child(InstantDamage.build(), "instantdamage")
                 .child(Clear.build(), "clear")
                 .permission(Permissions.BASE)
                 .build();

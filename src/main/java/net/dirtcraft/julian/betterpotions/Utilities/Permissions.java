@@ -2,14 +2,23 @@ package net.dirtcraft.julian.betterpotions.Utilities;
 
 public class Permissions {
 
-    //Permission for /potions
+    /*
+
+    Permission for /potions
+
+     */
     public static final String BASE = "betterpotions.base";
 
-    //Permission for /potions clear
+    /*
+
+    Permission for /potions clear
+
+     */
     public static final String CLEAR = "betterpotions.clear";
 
     //Permissions for each potion to show up on /potions
     public static final String ABSORPTION = "betterpotions.absorption";
+    public static final String BAD_LUCK = "betterpotions.badluck";
     public static final String BLINDNESS = "betterpotions.blindness";
     public static final String FIRE_RESISTANCE = "betterpotions.fireresistance";
     public static final String GLOWING = "betterpotions.glowing";
@@ -17,6 +26,7 @@ public class Permissions {
     public static final String HASTE = "betterpotions.haste";
     public static final String HEALTH_BOOST = "betterpotions.healthboost";
     public static final String HUNGER = "betterpotions.hunger";
+    public static final String INSTANT_DAMAGE = "betterpotions.instantdamage";
     public static final String INVISIBILITY = "betterpotions.invisibility";
     public static final String JUMP_BOOST = "betterpotions.jumpboost";
     public static final String LEVITATION = "betterpotions.levitation";
@@ -35,6 +45,10 @@ public class Permissions {
     public static final String WEAKNESS = "betterpotions.weakness";
     public static final String WITHER = "betterpotions.wither";
 
-    //Permission for /potions reload
+    /*
+
+    Permission for /potions reload
+
+     */
     public static final String RELOAD = "betterpotions.reload";
 }

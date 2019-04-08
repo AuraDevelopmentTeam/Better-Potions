@@ -14,10 +14,16 @@ public class PluginConfiguration {
 
     @ConfigSerializable
     public static class GlobalConfigs {
+        @Setting (comment = "List of enabled potions. true is enabled and false is disabled.")
+        public static boolean Aborption = true;
+        @Setting
+        public static boolean BadLuck = false;
+        @Setting
+        public static boolean InstantDamage = false;
         @Setting
         public static boolean NightVision = true;
         @Setting
-        public static boolean Nausea = true;
+        public static boolean Nausea = false;
         @Setting
         public static boolean Regeneration = true;
         @Setting
@@ -35,15 +41,13 @@ public class PluginConfiguration {
         @Setting
         public static boolean WaterBreathing = true;
         @Setting
-        public static boolean Aborption = true;
-        @Setting
-        public static boolean Blindness = true;
+        public static boolean Blindness = false;
         @Setting
         public static boolean Glowing = true;
         @Setting
         public static boolean Haste = true;
         @Setting
-        public static boolean Hunger = true;
+        public static boolean Hunger = false;
         @Setting
         public static boolean Godmode = true;
         @Setting
@@ -51,19 +55,19 @@ public class PluginConfiguration {
         @Setting
         public static boolean Luck = true;
         @Setting
-        public static boolean MiningFatigue = true;
+        public static boolean MiningFatigue = false;
         @Setting
-        public static boolean Poison = true;
+        public static boolean Poison = false;
         @Setting
         public static boolean Resistance = true;
         @Setting
         public static boolean Saturation = true;
         @Setting
-        public static boolean Slowness = true;
+        public static boolean Slowness = false;
         @Setting
-        public static boolean Weakness = true;
+        public static boolean Weakness = false;
         @Setting
-        public static boolean Wither = true;
+        public static boolean Wither = false;
     }
 
     @ConfigSerializable

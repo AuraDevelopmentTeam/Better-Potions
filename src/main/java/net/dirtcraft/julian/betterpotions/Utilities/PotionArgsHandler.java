@@ -51,7 +51,7 @@ public class PotionArgsHandler {
                                 .append(TextSerializers.FORMATTING_CODE.deserialize(
                                         "&d" + potionType + " &7has been &cdisabled&7 for &b" + player.getName()))
                                 .build())
-                        .onHover(TextActions.showText(TextSerializers.FORMATTING_CODE.deserialize("&6&o/potions " + potionCommand)))
+                        .onHover(TextActions.showText(TextSerializers.FORMATTING_CODE.deserialize("&6&o/potions " + potionCommand + " &7&o[potency]")))
                         .onClick(TextActions.suggestCommand("/potions " + potionCommand + " "))
                         .build()
         );
@@ -76,7 +76,7 @@ public class PotionArgsHandler {
                                 "&d" + potionType + " &7has been &aenabled&7 for &b" + player.getName()))
                         .build())
                 .onHover(TextActions.showText(TextSerializers.FORMATTING_CODE.deserialize("&6&o/potions " + potionCommand)))
-                        .onClick(TextActions.suggestCommand("/potions " + potionCommand + " "))
+                        .onClick(TextActions.runCommand("/potions " + potionCommand))
                 .build());
 
     }

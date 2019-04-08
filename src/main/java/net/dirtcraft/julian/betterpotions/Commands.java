@@ -35,6 +35,13 @@ public class Commands implements CommandExecutor {
 
                 MessageHandler.withArgs(player, potions, potionType, potionCommand, potionName);
             }
+            if (PluginConfiguration.GlobalConfigs.BadLuck && player.hasPermission(Permissions.BAD_LUCK)) {
+                final String potionName = "Bad Luck";
+                final String potionCommand = "badluck";
+                final PotionEffectType potionType = PotionEffectTypes.UNLUCK;
+
+                MessageHandler.withArgs(player, potions, potionType, potionCommand, potionName);
+            }
             if (PluginConfiguration.GlobalConfigs.Blindness && player.hasPermission(Permissions.BLINDNESS)) {
                 final String potionName = "Blindness";
                 final String potionCommand = "blindness";
@@ -83,6 +90,13 @@ public class Commands implements CommandExecutor {
                 final PotionEffectType potionType = PotionEffectTypes.HUNGER;
 
                 MessageHandler.withArgs(player, potions, potionType, potionCommand, potionName);
+            }
+            if (PluginConfiguration.GlobalConfigs.InstantDamage && player.hasPermission(Permissions.INSTANT_DAMAGE)) {
+                final String potionName = "Instant Damage";
+                final String potionCommand = "instantdamage";
+                final PotionEffectType potionType = PotionEffectTypes.BLINDNESS;
+
+                MessageHandler.noArgs(player, potions, potionType, potionCommand, potionName);
             }
             if (PluginConfiguration.GlobalConfigs.Invisbility && player.hasPermission(Permissions.INVISIBILITY)) {
                 final String potionName = "Invisibility";
