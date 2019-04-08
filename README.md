@@ -4,8 +4,10 @@
 Allows players to choose their own potion effects!
 
 ## [Permissions](https://github.com/AuraDevelopmentTeam/Better-Potions/blob/master/src/main/java/net/dirtcraft/julian/betterpotions/Utilities/Permissions.java)
+- [**Click me**](https://github.com/AuraDevelopmentTeam/Better-Potions/blob/master/src/main/java/net/dirtcraft/julian/betterpotions/Utilities/Permissions.java) to view permissions for Better Potions.
 
 ## [Configuration](https://paste.gg/p/anonymous/bcb52828b3fa4c619dfdb25f4b16907e)
+- [**Click me**](https://paste.gg/p/anonymous/bcb52828b3fa4c619dfdb25f4b16907e) to view the configuration for Better Potions.
 - By default, all negative potions are disabled.
 - All potions can be enabled or disabled in the configuration.
 
