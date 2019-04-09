@@ -52,8 +52,8 @@ public class MessageHandler {
                             .append(Text.builder()
                                     .append(TextSerializers.FORMATTING_CODE.deserialize("&d" + potionName + " &a✓"))
                                     .build())
-                            .onHover(TextActions.showText(TextSerializers.FORMATTING_CODE.deserialize("&6&o/potions " + potionCommand + " &7&o[potency]")))
-                            .onClick(TextActions.suggestCommand("/potions " + potionCommand + " "))
+                            .onHover(TextActions.showText(TextSerializers.FORMATTING_CODE.deserialize("&6&o/potions " + potionCommand)))
+                            .onClick(TextActions.runCommand("/potions " + potionCommand))
                             .build());
         } else {
             potions.add(
