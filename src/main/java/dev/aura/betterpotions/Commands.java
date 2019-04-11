@@ -1,8 +1,8 @@
 package dev.aura.betterpotions;
 
-import dev.aura.betterpotions.Configuration.PluginConfiguration;
-import dev.aura.betterpotions.Utilities.MessageHandler;
-import dev.aura.betterpotions.Utilities.Permissions;
+import dev.aura.betterpotions.config.PluginConfiguration;
+import dev.aura.betterpotions.util.MessageHandler;
+import dev.aura.betterpotions.util.Permissions;
 import java.util.ArrayList;
 import org.spongepowered.api.command.CommandException;
 import org.spongepowered.api.command.CommandResult;

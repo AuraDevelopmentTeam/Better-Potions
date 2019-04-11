@@ -1,37 +1,37 @@
 package dev.aura.betterpotions;
 
 import com.google.inject.Inject;
-import dev.aura.betterpotions.Configuration.ConfigManager;
-import dev.aura.betterpotions.Potions.Absorption;
-import dev.aura.betterpotions.Potions.BadLuck;
-import dev.aura.betterpotions.Potions.Blindness;
-import dev.aura.betterpotions.Potions.Clear;
-import dev.aura.betterpotions.Potions.FireResistance;
-import dev.aura.betterpotions.Potions.Glowing;
-import dev.aura.betterpotions.Potions.Godmode;
-import dev.aura.betterpotions.Potions.Haste;
-import dev.aura.betterpotions.Potions.HealthBoost;
-import dev.aura.betterpotions.Potions.Hunger;
-import dev.aura.betterpotions.Potions.InstantDamage;
-import dev.aura.betterpotions.Potions.Invisibility;
-import dev.aura.betterpotions.Potions.JumpBoost;
-import dev.aura.betterpotions.Potions.Levitation;
-import dev.aura.betterpotions.Potions.Luck;
-import dev.aura.betterpotions.Potions.MiningFatigue;
-import dev.aura.betterpotions.Potions.Nausea;
-import dev.aura.betterpotions.Potions.NightVision;
-import dev.aura.betterpotions.Potions.Poison;
-import dev.aura.betterpotions.Potions.Regeneration;
-import dev.aura.betterpotions.Potions.Resistance;
-import dev.aura.betterpotions.Potions.Saturation;
-import dev.aura.betterpotions.Potions.Slowness;
-import dev.aura.betterpotions.Potions.Strength;
-import dev.aura.betterpotions.Potions.Swiftness;
-import dev.aura.betterpotions.Potions.WaterBreathing;
-import dev.aura.betterpotions.Potions.Weakness;
-import dev.aura.betterpotions.Potions.Wither;
-import dev.aura.betterpotions.Utilities.Permissions;
-import dev.aura.betterpotions.Utilities.Reload;
+import dev.aura.betterpotions.config.ConfigManager;
+import dev.aura.betterpotions.potion.Absorption;
+import dev.aura.betterpotions.potion.BadLuck;
+import dev.aura.betterpotions.potion.Blindness;
+import dev.aura.betterpotions.potion.Clear;
+import dev.aura.betterpotions.potion.FireResistance;
+import dev.aura.betterpotions.potion.Glowing;
+import dev.aura.betterpotions.potion.Godmode;
+import dev.aura.betterpotions.potion.Haste;
+import dev.aura.betterpotions.potion.HealthBoost;
+import dev.aura.betterpotions.potion.Hunger;
+import dev.aura.betterpotions.potion.InstantDamage;
+import dev.aura.betterpotions.potion.Invisibility;
+import dev.aura.betterpotions.potion.JumpBoost;
+import dev.aura.betterpotions.potion.Levitation;
+import dev.aura.betterpotions.potion.Luck;
+import dev.aura.betterpotions.potion.MiningFatigue;
+import dev.aura.betterpotions.potion.Nausea;
+import dev.aura.betterpotions.potion.NightVision;
+import dev.aura.betterpotions.potion.Poison;
+import dev.aura.betterpotions.potion.Regeneration;
+import dev.aura.betterpotions.potion.Resistance;
+import dev.aura.betterpotions.potion.Saturation;
+import dev.aura.betterpotions.potion.Slowness;
+import dev.aura.betterpotions.potion.Strength;
+import dev.aura.betterpotions.potion.Swiftness;
+import dev.aura.betterpotions.potion.WaterBreathing;
+import dev.aura.betterpotions.potion.Weakness;
+import dev.aura.betterpotions.potion.Wither;
+import dev.aura.betterpotions.util.Permissions;
+import dev.aura.betterpotions.util.Reload;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
 import ninja.leaping.configurate.loader.ConfigurationLoader;
 import org.bstats.sponge.MetricsLite2;
@@ -51,15 +51,18 @@ import org.spongepowered.api.util.metric.MetricsConfigManager;
 @Plugin(
   id = BetterPotions.ID,
   name = BetterPotions.NAME,
+  version = BetterPotions.VERSION,
   description = BetterPotions.DESCRIPTION,
-  authors = {BetterPotions.AUTHOR}
+  url = BetterPotions.URL,
+  authors = {BetterPotions.AUTHOR_JULIAN}
 )
 public class BetterPotions {
-
-  public static final String ID = "betterpotions";
-  public static final String NAME = "Better Potions";
-  public static final String DESCRIPTION = "Allows players to choose their own potion effects!";
-  public static final String AUTHOR = "juliann";
+  public static final String ID = "@id@";
+  public static final String NAME = "@name@";
+  public static final String VERSION = "@version@";
+  public static final String DESCRIPTION = "@description@";
+  public static final String URL = "https://github.com/AuraDevelopmentTeam/Better-Potions";
+  public static final String AUTHOR_JULIAN = "juliann";
 
   @Inject protected MetricsLite2 metrics;
 
@@ -76,10 +79,15 @@ public class BetterPotions {
   private static BetterPotions instance;
 
   @Inject private MetricsConfigManager metricsConfigManager;
+  
+  protected BetterPotions() {
+    if (instance != null) throw new IllegalStateException("Instance already exists!");
+
+    instance = this;
+  }
 
   @Listener
   public void onPreInit(GamePreInitializationEvent event) {
-    instance = this;
     registerCommands();
     loadConfig();
     logger.info("Configuration for " + container.getName() + " has been successfully loaded.");
