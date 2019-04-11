@@ -1,23 +1,81 @@
-# Compiled class file
-*.class
+#################
+## Gradle
+#################
 
-# Log file
-*.log
+.gradle/
+build/
+run/
+gradle-app.setting
 
-# BlueJ files
-*.ctxt
+# Test reports
+*-TestReport*
+# Coverage reports
+*-CoverageReport*
+# Spotbugs reports
+*-SpotbugsReport*
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+#################
+## Eclipse
+#################
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+
+#################
+## IntelliJ
+#################
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+
+#############
+## Windows detritus
+#############
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
+
+#################
+## Dev Env
+#################
+
+run
+*.lang.txt
